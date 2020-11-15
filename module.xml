@@ -4,7 +4,7 @@
     <Module>
       <Name>interoperability-integratedml-adapter</Name>
       <Description>A IRIS Interoperability Adapter for ML models managed by IRIS IntegratedML.</Description>
-      <Version>0.0.1</Version>
+      <Version>1.0.0</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.Ens.Adapter.PKG"/>
