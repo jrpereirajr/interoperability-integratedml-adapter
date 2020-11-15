@@ -5,7 +5,7 @@ Property Model As %String;
 
 Property Request As %RegisteredObject;
 
-Parameter SETTINGS = "Model:basic";
+Parameter SETTINGS = "Model:Basic:selector?context={dc.Ens.Adapter.ClassficationMLContextSearch/GetModels}";
 
 /// This user callback method is called just after %OnNew()
 Method OnInit() As %Status
