@@ -94,7 +94,7 @@ Notice that the model name is referenced by Model property. Such property must b
 In such way it's possible to interoperability developer use ML models in their workflows without care about specific SQL sintax.
 
 ## What would be its advantages?
-Once the adapter lets interoperability users to just use ML into their work flows without caring about ML models prototyping and implementation, this adapter could help developer by:
+Once the adapter lets interoperability users to just use ML into their work flows without caring about ML models prototyping and implementation, this adapter could help developers by:
 
 - provinding decoupling from ML and interoperability;
 - helping teams to focus on their responsabilities - ML team cares about model stuffs while Interoperability team cares about integrating systems.
