@@ -8,7 +8,7 @@
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.Ens.Adapter.PKG"/>
-      <SystemRequirements Version=">=2020.3.0.302.0" Interoperability="enabled" />
+      <SystemRequirements Version=">=2020.3" Interoperability="enabled" />
     </Module>
   </Document>
 </Export>
