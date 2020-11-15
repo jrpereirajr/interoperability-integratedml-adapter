@@ -16,7 +16,7 @@ The projetc's goal is to let interoperability developers use ML models capabilit
 As an example of adapter's use, a model for credit card transactions fraud detection was used to simulate a simple financial production. A service starts to receive transactions to process and when a suspicious transaction is detected, an alert is issued.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/8899513/85149599-7848f900-b21f-11ea-9b65-b5d703752de3.PNG" width="600" title="docker environment topology after installation">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/KMWbgqw1C9.gif" width="600" title="docker environment topology after installation">
 </p>
 
 ## Installation
@@ -47,7 +47,7 @@ USER>zpm "install interoperability-integratedml-adapter"
 
 ## Jupyter notebooks
 A notebook explaing the process of analysis and model prototype development is presented at http://localhost:8896/tree.
-- [FraudDetection.ipynb](jupyter-samples/frauddetection.ipynb): A simple model for credit card fraud detection using IntegratedML for auto ML.
+- [FraudDetection.ipynb](jupyter-samples/FraudDetection.ipynb): A simple model for credit card fraud detection using IntegratedML for auto ML.
 
 ## References
 This work was based in templates for IRIS Interoperability and IRIS intergrated ML:
