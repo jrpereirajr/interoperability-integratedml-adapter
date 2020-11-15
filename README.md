@@ -17,13 +17,13 @@ Open the production and start it.
 As an example of adapter's use, a model for credit card transactions fraud detection was used to simulate a simple financial production. A service starts to receive transactions to process and when a suspicious transaction is detected, an alert is issued.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/KMWbgqw1C9.gif" width="600" title="docker environment topology after installation">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/KMWbgqw1C9.gif" width="800" title="docker environment topology after installation">
 </p>
 
 Results are also persisted in iris-shared/output/valid-transactions.txt file.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/KMWbgqw1C9.gif" width="600" title="docker environment topology after installation">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/notepad_wPhN8SqVAT.png" width="400" title="docker environment topology after installation">
 </p>
 
 ## Installation
