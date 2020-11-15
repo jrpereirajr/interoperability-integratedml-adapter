@@ -65,6 +65,11 @@ After saving the class, you must to configure the model's name into parameter "M
   <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-1.5.png" width="400">
 </p>
 
+The adaptor loads all classification models available in the namespace, so you can choose the the one which best fit to your needs.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/frv6yItsOZ.gif" width="400">
+</p>
+
 Now, you can use adapter's method Classify(), and provide a sample of features expected by the model:
 <p align="center">
   <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-2.png" width="400">
@@ -91,7 +96,19 @@ Notice that the model name is referenced by Model property. Such property must b
   <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-1.5.png" width="400">
 </p>
 
-In such way it's possible to interoperability developer use ML models in their workflows without care about specific SQL sintax.
+The model list in the adaptor settings is done by two steps:
+
+1. Creating a method into a class which extends %ZEN.Portal.ContextSearch to load all classification models and returning them (dc.Ens.Adapter.ClassficationMLContextSearch)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-it-works-2.png" width="400">
+</p>
+
+2. Configuring such class and method as feeder for property Model into SETTINGS parameter in the adaptor class (dc.Ens.Adapter.ClassificationMLAdapter)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-it-works-3.png" width="400">
+</p>
+
+In such way it's possible to interoperability developers use ML models in their workflows without care about specific SQL sintax.
 
 ## What would be its advantages?
 Once the adapter lets interoperability users to just use ML into their work flows without caring about ML models prototyping and implementation, this adapter could help developers by:
