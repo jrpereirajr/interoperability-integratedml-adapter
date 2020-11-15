@@ -14,7 +14,7 @@ An IRIS Interoperability adapter to use ML models managed by IRIS IntegratedML.
 The projetc's goal is to let interoperability developers use ML models capabilities in their interoperability productions. Such functionalty is achieve by IRIS Interoperability extension framework, through a custom adapter which access ML models managed by IRIS IntegratedML.
 
 ## How to run the example
-Open the production and start it (user/password for IRIS instance: SuperUser/SYS).
+[Open the production](http://localhost:8092/csp/user/EnsPortal.Productions.zen?$NAMESPACE=USER&$NAMESPACE=USER&) and start it (user/password for IRIS instance: SuperUser/SYS).
 As an example of adapter's use, a model for credit card transactions fraud detection was used to simulate a simple financial production. A service starts to receive transactions to process and when a suspicious transaction is detected, an alert is issued.
 
 <p align="center">
