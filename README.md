@@ -65,7 +65,7 @@ After saving the class, you must to configure the model's name into parameter "M
   <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-1.5.png" width="400">
 </p>
 
-The adaptor loads all classification models available in the namespace, so you can choose the the one which best fit to your needs.
+The adaptor loads all classification models available in the namespace, so you can choose the one which best fits to your needs.
 <p align="center">
   <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/frv6yItsOZ.gif" width="400">
 </p>
