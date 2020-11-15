@@ -75,6 +75,11 @@ This method returns a object of the class dc.Ens.Adapter.ClassificationResult. A
   <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-3.png" width="400" title="docker environment topology after installation">
 </p>
 
+You can use them as your needs. In the example, just the result for fraud prediction was necessary, so the Business Operation class just use value returned into Predicted property:
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-4.png" width="400" title="docker environment topology after installation">
+</p>
+
 ## Jupyter notebooks
 A notebook explaing the process of analysis and model prototype development is presented at http://localhost:8896/tree.
 - [FraudDetection.ipynb](jupyter-samples/FraudDetection.ipynb): A simple model for credit card fraud detection using IntegratedML for auto ML.
