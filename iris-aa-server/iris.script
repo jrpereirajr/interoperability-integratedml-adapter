@@ -16,6 +16,8 @@ do ##class(community.csvgen).Generate("/data/titanic.csv",",","User.Passengers")
 do ##class(community.csvgen).GenerateFromURL("https://raw.githubusercontent.com/datasciencedojo/datasets/master/WorldDBTables/CountryTable.csv",",","User.Countries")
 
 do ##class(community.csvgen).Generate("/data/readmission.csv",",","User.Readmission")
+do ##class(community.csvgen).Generate("/data/creditcard.csv", ",", "User.CreditCard")
 
+do ##class(dc.fraudDetectionEx.ml.Utils).Setup()
 
 halt

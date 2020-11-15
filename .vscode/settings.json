@@ -5,6 +5,8 @@
   },
   "objectscript.conn" :{
       "ns": "USER",
+      "username": "SuperUser",
+      "password": "SYS",
       "active": true,
       "docker-compose": {
         "service": "irisimlsvr",

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="interoperability-integratedml-adapter.ZPM">
+    <Module>
+      <Name>interoperability-integratedml-adapter</Name>
+      <Description>A IRIS Interoperability Adapter for ML models managed by IRIS IntegratedML.</Description>
+      <Version>0.0.1</Version>
+      <Packaging>module</Packaging>
+      <SourcesRoot>src</SourcesRoot>
+      <Resource Name="dc.Ens.Adapter.PKG"/>
+      <SystemRequirements Version=">=2020.3.0.302.0" Interoperability="enabled" />
+    </Module>
+  </Document>
+</Export>
