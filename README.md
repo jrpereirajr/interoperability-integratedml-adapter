@@ -7,6 +7,8 @@ An IRIS Interoperability adapter to use ML models managed by IRIS IntegratedML.
 * [Installation](#installation)
 * [Installation (ZPM)](#installation-zpm)
 * [How to use the adapter?](#how-to-use-the-adapter)
+* [How it works?](#how-it-works)
+* [What would be its advantages?](#what-would-be-its-advantages)
 * [Jupyter notebooks](#jupyter-notebooks)
 * [References](#references)
 
@@ -18,13 +20,13 @@ The projetc's goal is to let interoperability developers use ML models capabilit
 As an example of adapter's use, a model for credit card transactions fraud detection was used to simulate a simple financial production. A service starts to receive transactions to process and when a suspicious transaction is detected, an alert is issued.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/KMWbgqw1C9.gif" width="800" title="docker environment topology after installation">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/KMWbgqw1C9.gif" width="800">
 </p>
 
 Results are also persisted in iris-shared/output/valid-transactions.txt file.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/notepad_wPhN8SqVAT.png" width="400" title="docker environment topology after installation">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/notepad_wPhN8SqVAT.png" width="400">
 </p>
 
 ## Installation
@@ -48,37 +50,54 @@ $ docker-compose up -d
 ```
 
 ## Installation (ZPM)
-
 If you just wanna the adaptor, you could install it through ZPM.
 Open Terminal and call:
 USER>zpm "install interoperability-integratedml-adapter"
 
 ## How to use the adapter?
-
-Create a Business Process or Business Operation which uses as adapter the class dc.ENS.Adapter.ClassificationMLAdapter.
+Create a host class (aBusiness Process or Business Operation class) which uses as adapter the class dc.ENS.Adapter.ClassificationMLAdapter.
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-1.png" width="400" title="docker environment topology after installation">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-1.png" width="400">
 </p>
 
 After saving the class, you must to configure the model's name into parameter "Model", like this:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-1.5.png" width="400" title="docker environment topology after installation">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-1.5.png" width="400">
 </p>
 
 Now, you can use adapter's method Classify(), and provide a sample of features expected by the model:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-2.png" width="400" title="docker environment topology after installation">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-2.png" width="400">
 </p>
 
 This method returns a object of the class dc.Ens.Adapter.ClassificationResult. As you can see, this class has properties for prediction and probability calculated by the classification model.
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-3.png" width="400" title="docker environment topology after installation">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-3.png" width="400">
 </p>
 
 You can use them as your needs. In the example, just the result for fraud prediction was necessary, so the Business Operation class just use value returned into Predicted property:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-4.png" width="400" title="docker environment topology after installation">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-4.png" width="400">
 </p>
+
+## How it works?
+The adapter just uses IntegratedML SQL functions [PREDICT](https://docs.intersystems.com/iris20203/csp/docbook/DocBook.UI.Page.cls?KEY=GIML_PREDICT) and [PROBABILITY](https://docs.intersystems.com/iris20203/csp/docbook/Doc.View.cls?KEY=GIML_PROBABILITY), to get the predicted class from model and its probability. It's just a simple SQL:
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-it-works-1.png" width="400">
+</p>
+
+Notice that the model name is referenced by Model property. Such property must be defined in host class that uses the adapter, otherwise an exception will be thown. For example:
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-1.5.png" width="400">
+</p>
+
+In such way it's possible to interoperability developer use ML models in their workflows without care about specific SQL sintax.
+
+## What would be its advantages?
+Once the adapter lets interoperability users to just use ML into their work flows without caring about ML models prototyping and implementation, this adapter could help developer by:
+
+- provinding decoupling from ML and interoperability;
+- helping teams to focus on their responsabilities - ML team cares about model stuffs while Interoperability team cares about integrating systems.
 
 ## Jupyter notebooks
 A notebook explaing the process of analysis and model prototype development is presented at http://localhost:8896/tree.
