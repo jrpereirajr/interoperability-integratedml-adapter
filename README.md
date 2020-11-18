@@ -52,6 +52,7 @@ $ docker-compose up -d
 ## Installation (ZPM)
 If you just wanna the adaptor, you could install it through ZPM.
 Open Terminal and call:
+
 USER>zpm "install interoperability-integratedml-adapter"
 
 ## How to use the adapter?
@@ -85,6 +86,13 @@ You can use them as your needs. In the example, just the result for fraud predic
   <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-4.png" width="400">
 </p>
 
+For regression models, the results is modeled by dc.Ens.Adapter.RegressionResult class. This class has a property called Estimated.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-4.png" width="400">
+</p>
+
+For get a estimation value from a sample, the adapter class for regression model has the Estimate method.
+
 ## How it works?
 The adapter just uses IntegratedML SQL functions [PREDICT](https://docs.intersystems.com/iris20203/csp/docbook/DocBook.UI.Page.cls?KEY=GIML_PREDICT) and [PROBABILITY](https://docs.intersystems.com/iris20203/csp/docbook/Doc.View.cls?KEY=GIML_PROBABILITY), to get the predicted class from model and its probability. It's just a simple SQL:
 <p align="center">
@@ -93,7 +101,7 @@ The adapter just uses IntegratedML SQL functions [PREDICT](https://docs.intersys
 
 In a similar way, the class dc.Ens.Adapter.RegressionMLAdapter executes a SQL but just using the PREDICT function for estimation of regression models.
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-it-works-1.png" width="400">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-it-works-1.25.png" width="400">
 </p>
 
 Notice that the model name is referenced by Model property. Such property must be defined in host class that uses the adapter, otherwise an exception will be thown. For example:
