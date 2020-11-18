@@ -142,6 +142,7 @@ Once the adapter lets interoperability users to just use ML into their work flow
 ## Jupyter notebooks
 A notebook explaing the process of analysis and model prototype development is presented at http://localhost:8896/tree.
 - [FraudDetection.ipynb](jupyter-samples/FraudDetection.ipynb): A simple model for credit card fraud detection using IntegratedML for auto ML.
+- [TransactionAmountEstimation.ipynb](jupyter-samples/TransactionAmountEstimation.ipynb): A simple model for estimating the value of a transaction using IntegratedML for auto ML.
 
 ## References
 This work was based in templates for IRIS Interoperability and IRIS intergrated ML:
