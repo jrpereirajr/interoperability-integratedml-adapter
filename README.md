@@ -91,6 +91,11 @@ The adapter just uses IntegratedML SQL functions [PREDICT](https://docs.intersys
   <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-it-works-1.png" width="400">
 </p>
 
+In a similar way, the class dc.Ens.Adapter.RegressionMLAdapter executes a SQL but just using the PREDICT function for estimation of regression models.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-it-works-1.png" width="400">
+</p>
+
 Notice that the model name is referenced by Model property. Such property must be defined in host class that uses the adapter, otherwise an exception will be thown. For example:
 <p align="center">
   <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-to-use-it-1.5.png" width="400">
@@ -106,6 +111,16 @@ The model list in the adaptor settings is done by two steps:
 2. Configuring such class and method as feeder for property Model into SETTINGS parameter in the adaptor class (dc.Ens.Adapter.ClassificationMLAdapter)
 <p align="center">
   <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-it-works-3.png" width="400">
+</p>
+
+For regression models, there's the class dc.Ens.Adapter.RegressionMLContextSearch, which loads all regression models.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/ZqHdheEVWG.gif" width="400">
+</p>
+
+In this case, the MODE_TYPE filter is set to 'regression' instead of 'classfication':
+<p align="center">
+  <img src="https://raw.githubusercontent.com/jrpereirajr/interoperability-integratedml-adapter/master/img/how-it-works-2.5.png" width="400">
 </p>
 
 In such way it's possible to interoperability developers use ML models in their workflows without care about specific SQL sintax.
