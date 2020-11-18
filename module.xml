@@ -4,9 +4,9 @@
     <Module>
       <Name>interoperability-integratedml-adapter</Name>
       <Description>A IRIS Interoperability Adapter for ML models managed by IRIS IntegratedML.</Description>
-      <Version>1.1.0</Version>
+      <Version>1.1.1</Version>
       <Packaging>module</Packaging>
-      <SourcesRoot>src</SourcesRoot>
+      <SourcesRoot>iris-aa-server/src</SourcesRoot>
       <Resource Name="dc.Ens.Adapter.PKG"/>
       <SystemRequirements Version=">=2020.3" Interoperability="enabled" />
     </Module>
