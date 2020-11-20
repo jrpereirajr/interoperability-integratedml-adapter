@@ -31,7 +31,7 @@ a classification mc&l for credit card fraud detection]]></annotation>
 <assign property="response" value="callresponse" action="set" />
 </response>
 </call>
-<if condition='response.IsFraud = 1' xpos='200' ypos='450' xend='200' yend='700' >
+<if name='Is fraud?' condition='response.IsFraud = 1' xpos='200' ypos='450' xend='200' yend='700' >
 <annotation><![CDATA[Check if the response has the isFraud flag enabled]]></annotation>
 <true>
 <alert value='"Suspicious transaction detected!"' xpos='335' ypos='600' >
