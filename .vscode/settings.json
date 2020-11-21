@@ -16,5 +16,6 @@
         "IRIS IntegratedML Jupyter": "http://localhost:8896/tree",
         "Webterminal": "http://localhost:8092/terminal/"
         }
-  }
+  },
+  "java.configuration.updateBuildConfiguration": "automatic"
 }

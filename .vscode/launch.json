@@ -1,11 +1,18 @@
 {
     "version": "0.2.0",
-    "configurations": [    
+    "configurations": [
+      {
+        "type": "java",
+        "name": "CodeLens (Launch) - ProcessTransactionOperation",
+        "request": "launch",
+        "mainClass": "ProcessTransactionOperation",
+        "projectName": "fraud-detection-ex-pex"
+      },
       {
         "type": "objectscript",
         "request": "launch",
-        "name": "ObjectScript Debug Class", 
-        "program": "##class(PackageSample.ObjectScript).Test()",
+        "name": "ObjectScript Debug Class",
+        "program": "##class(PackageSample.ObjectScript).Test()"
       },
       {
         "type": "objectscript",
