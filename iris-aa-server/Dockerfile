@@ -56,3 +56,4 @@ COPY jgw /jgw
 # COPY lib/interoperability-integratedml-adapter.jar /jgw/interoperability-integratedml-adapter.jar  
 
 # COPY jgw/* /usr/irissys/dev/java/lib/JDK18/
+USER irisowner
